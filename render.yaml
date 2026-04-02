@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: stremio-nuvio-sync
+    runtime: node
+    buildCommand: npm install
+    startCommand: node src/index.js
+    disk:
+      name: data
+      mountPath: /data
+      sizeGB: 1
+    envVars:
+      - key: STREMIO_EMAIL
+        sync: false
+      - key: STREMIO_PASSWORD
+        sync: false
+      - key: TMDB_API_KEY
+        sync: false
+      - key: PORT
+        value: 7860
+        sync: false
+      - key: POLL_INTERVAL_MS
+        value: 300000
+        sync: false
+      - key: ADDON_BASE_URL
+        sync: false

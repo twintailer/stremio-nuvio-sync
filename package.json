@@ -1,0 +1,19 @@
+{
+  "name": "stremio-nuvio-sync",
+  "version": "1.0.0",
+  "description": "Stremio addon that syncs library and watch progress to Nuvio",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "sql.js": "^1.11.0",
+    "express": "^4.21.0",
+    "node-cron": "^3.0.3",
+    "node-fetch": "^2.7.0",
+    "stremio-addon-sdk": "^1.6.10"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
